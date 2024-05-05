@@ -6,7 +6,7 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 14:27:51 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/05/05 18:46:41 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/05/05 19:10:37 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # include <unistd.h> //read .
 
 char	*get_next_line(int fd);
-// utils .
 size_t	ft_strlen(const char *s);
 int		ft_linelen(const char *s);
 char	*ft_strchr(const char *s, int c);

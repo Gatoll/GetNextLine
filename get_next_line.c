@@ -6,13 +6,13 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:20:56 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/05/05 18:56:09 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/05/05 19:11:17 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_read(int fd, char *cache)
+static char	*ft_read(int fd, char *cache)
 {
 	char	*buf;
 	int		read_bytes;
@@ -41,7 +41,7 @@ char	*ft_read(int fd, char *cache)
 	return (free(buf), cache);
 }
 
-char	*ft_get_line(char *cache, int *linelen)
+static char	*ft_get_line(char *cache, int *linelen)
 {
 	char	*line;
 	int		i;
@@ -67,7 +67,7 @@ char	*ft_get_line(char *cache, int *linelen)
 	return (line);
 }
 
-char	*ft_save(char *cache, int linelen)
+static char	*ft_save(char *cache, int linelen)
 {
 	int		j;
 	char	*res;
