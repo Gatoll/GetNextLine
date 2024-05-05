@@ -1,0 +1,77 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/30 14:20:53 by kaokazak          #+#    #+#             */
+/*   Updated: 2024/05/05 00:43:38 by kaokazak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "get_next_line.h"
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
+
+int	ft_linelen(const char *s)
+{
+    int len;
+
+    if (!s)
+        return (0);
+    len = 0;
+	while (s[len] != '\0' && s[len] != '\n')
+		len++;
+	return (len);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	char	cc;
+
+    if (!s)
+        return (NULL);
+	cc = (char)c;
+	while (*s != '\0')
+	{
+		if (*s == cc)
+			return ((char *)s);
+		s++;
+	}
+	if (cc == '\0')
+		return ((char *)s);
+	return (NULL);
+}
+
+char	*ft_strjoin(const char *s1, const char *s2)
+{
+	char	*res;
+	size_t	len;
+    int res_i;
+    int s_i;
+
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	res = (char *)malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (NULL);
+    res_i = 0;
+    s_i = 0;
+    while (s1[s_i] != '\0')
+        res[res_i++] = s1[s_i++];
+    s_i = 0;
+    while (s2[s_i] != '\0')
+        res[res_i++] = s2[s_i++];
+    res[res_i] = '\0';
+	return (res);
+}
