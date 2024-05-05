@@ -6,12 +6,11 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:20:56 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/05/05 18:48:35 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/05/05 18:56:09 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <libc.h>
 
 char	*ft_read(int fd, char *cache)
 {
@@ -100,7 +99,7 @@ char	*get_next_line(int fd)
 {
 	char		*line;
 	static char	*cache;
-	static int	linelen;
+	int			linelen;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
