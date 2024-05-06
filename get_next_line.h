@@ -6,7 +6,7 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 14:27:51 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/05/05 19:10:37 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/05/06 14:12:30 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stddef.h>
 # include <stdint.h>
 # include <stdlib.h>
-# include <unistd.h> //read .
+# include <unistd.h>
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
