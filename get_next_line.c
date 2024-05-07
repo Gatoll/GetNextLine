@@ -6,7 +6,7 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:20:56 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/05/05 19:11:17 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:59:34 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static char	*ft_read(int fd, char *cache)
 {
 	char	*buf;
-	int		read_bytes;
 	char	*tmp;
+	int		read_bytes;
 
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
@@ -69,8 +69,8 @@ static char	*ft_get_line(char *cache, int *linelen)
 
 static char	*ft_save(char *cache, int linelen)
 {
-	int		j;
 	char	*res;
+	int		i;
 
 	if (!cache)
 		return (NULL);
@@ -88,10 +88,10 @@ static char	*ft_save(char *cache, int linelen)
 		return (NULL);
 	}
 	linelen++;
-	j = 0;
+	i = 0;
 	while (cache[linelen] != '\0')
-		res[j++] = cache[linelen++];
-	res[j] = '\0';
+		res[i++] = cache[linelen++];
+	res[i] = '\0';
 	return (free(cache), res);
 }
 
