@@ -6,7 +6,7 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:20:53 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/05/05 18:49:21 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/05/07 15:27:02 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*ft_strdup(const char *s)
 	char	*res;
 
 	i = 0;
-	res = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	res = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!res)
 		return (NULL);
 	while (s[i] != '\0')
