@@ -6,7 +6,7 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 16:20:23 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/05/07 15:00:44 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:02:41 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,5 @@ char	*get_next_line(int fd)
 		return (NULL);
 	}
 	cache[fd] = ft_save(cache[fd], linelen);
-	if (!cache[fd])
-		return (line);
 	return (line);
 }
