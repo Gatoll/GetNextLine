@@ -6,7 +6,7 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 16:20:42 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/05/05 19:10:02 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/08/19 19:10:46 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024
 # endif
+
+#ifndef OPEN_MAX
+# define OPEN_MAX 1024
+#endif
 
 # include <stddef.h>
 # include <stdint.h>
