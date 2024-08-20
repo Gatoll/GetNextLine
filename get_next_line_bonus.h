@@ -6,7 +6,7 @@
 /*   By: kaokazak <kaokazak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 16:20:42 by kaokazak          #+#    #+#             */
-/*   Updated: 2024/08/19 19:10:46 by kaokazak         ###   ########.fr       */
+/*   Updated: 2024/08/20 15:44:54 by kaokazak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-#ifndef OPEN_MAX
-# define OPEN_MAX 1024
-#endif
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1024
+# endif
 
+# include <limits.h>
 # include <stddef.h>
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <limits.h>
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
